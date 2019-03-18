@@ -1,0 +1,29 @@
+{
+  "name": "nextjs-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js",
+    "build": "next build",
+    "start": "npm run build && cross-env NODE_ENV=production PORT=3000 node server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "isomorphic-unfetch": "^3.0.0",
+    "koa": "^2.7.0",
+    "koa-json": "^2.0.2",
+    "koa-router": "^7.4.0",
+    "next": "^8.0.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "eslint": "^5.15.2",
+    "eslint-plugin-react": "^7.12.4",
+    "nodemon": "^1.18.10"
+  }
+}
