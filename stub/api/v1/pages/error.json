@@ -1,0 +1,13 @@
+{
+    "head": {
+        "title": "404",
+        "description": "Next.js template error page",
+        "keywords": ""
+    },
+    "header": "404",
+    "content": [
+        {
+            "title": ""
+        }
+    ]
+}

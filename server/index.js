@@ -15,9 +15,21 @@ app.prepare().then(() => {
 
     server.use(json())
 
-    router.get('/api/v1/index', async ctx => {
+    router.post('/api/v1/pages/index', async ctx => {
         const json = require('../stub/api/v1/pages/index.json')
-        ctx.body = { pageData: json }
+        ctx.body = { data: json }
+        ctx.respond = true
+    })
+
+    router.post('/api/v1/pages/about', async ctx => {
+        const json = require('../stub/api/v1/pages/about.json')
+        ctx.body = { data: json }
+        ctx.respond = true
+    })
+
+    router.post('/api/v1/pages/error', async ctx => {
+        const json = require('../stub/api/v1/pages/error.json')
+        ctx.body = { data: json }
         ctx.respond = true
     })
 
