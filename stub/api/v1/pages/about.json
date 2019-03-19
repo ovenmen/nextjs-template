@@ -1,6 +1,13 @@
 {
-    "pageTitle": "О нас",
-    "description": "Next.js template",
-    "keywords": "",
-    "headerPage": "Страница о нас"
+    "head": {
+        "title": "О нас",
+        "description": "Next.js template",
+        "keywords": ""
+    },
+    "header": "Страница о нас",
+    "content": [
+        {
+            "title": "Предыстория"
+        }
+    ]
 }
