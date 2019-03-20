@@ -23,6 +23,7 @@
         "react"
     ],
     "rules": {
-        "semi": ["error", "never"]
+        "semi": ["error", "never"],
+        "indent": ["error", 4]
     }
 }
