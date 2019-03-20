@@ -1,9 +1,8 @@
 import React from 'react'
 import { object } from 'prop-types'
 import Link from 'next/link'
-import 'isomorphic-unfetch'
 
-import { API_STUB_URL } from '../config'
+import fetchDataPage from '../utils/fetch-data-page'
 
 const IndexPage = ({ data }) => (
     <div>
@@ -14,13 +13,7 @@ const IndexPage = ({ data }) => (
     </div>
 )
 
-IndexPage.getInitialProps = async () => {
-    const url = `${API_STUB_URL}/pages/index`
-    const params = { method: 'POST' }
-    const res = await fetch(url, params)
-    const json = await res.json()
-    return json
-}
+IndexPage.getInitialProps = fetchDataPage('index')
 
 IndexPage.propTypes = {
     data: object

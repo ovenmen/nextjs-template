@@ -1,9 +1,8 @@
 import React from 'react'
 import { object } from 'prop-types'
 import Link from 'next/link'
-import 'isomorphic-unfetch'
 
-import { API_STUB_URL } from '../config'
+import fetchDataPage from '../utils/fetch-data-page'
 
 const AboutPage = ({ data }) => (
     <div>
@@ -14,13 +13,7 @@ const AboutPage = ({ data }) => (
     </div>
 )
 
-AboutPage.getInitialProps = async () => {
-    const url = `${API_STUB_URL}/pages/about`
-    const params = { method: 'POST' }
-    const res = await fetch(url, params)
-    const json = await res.json()
-    return json
-}
+AboutPage.getInitialProps = fetchDataPage('about')
 
 AboutPage.propTypes = {
     data: object
