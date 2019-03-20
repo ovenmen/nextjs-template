@@ -13,8 +13,6 @@ app.prepare().then(() => {
     const server = new Koa()
     const router = new Router()
 
-    server.use(json())
-
     router.post('/api/v1/pages/index', async ctx => {
         const json = require('../stub/api/v1/pages/index.json')
         ctx.body = { data: json }
@@ -43,7 +41,9 @@ app.prepare().then(() => {
         await next()
     })
 
+    server.use(json())
     server.use(router.routes())
+
     http.createServer(server.callback()).listen(port, () => {
         console.log(`> Сервер запущен на http://localhost:${port}`)
     })
