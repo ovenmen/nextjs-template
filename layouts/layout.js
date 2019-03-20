@@ -16,6 +16,7 @@ const Layout = ({ children }) => {
                 <meta name="description" content={description} />
                 <meta name="keywords" content={keywords} />
                 <base href={BASE_URL} />
+                <link rel="stylesheet" href="/static/css/normalize.css" />
             </Head>
             {children}
         </article>
