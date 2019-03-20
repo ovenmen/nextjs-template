@@ -6,6 +6,7 @@ import Layout from '../layouts/layout'
 export default class extends App {
     render () {
         const { Component, pageProps } = this.props
+
         return (
             <Container>
                 <Layout>

@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     const { title, description, keywords } = children.props.data.head
     
     return (
-        <article>
+        <main>
             <Head>
                 <title>{title}</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -18,8 +18,10 @@ const Layout = ({ children }) => {
                 <base href={BASE_URL} />
                 <link rel="stylesheet" href="/static/css/normalize.css" />
             </Head>
-            {children}
-        </article>
+            <article>
+                {children}
+            </article>
+        </main>
     )
 }
 
