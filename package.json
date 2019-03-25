@@ -21,6 +21,7 @@
     "react-dom": "^16.8.4"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "cross-env": "^5.2.0",
     "eslint": "^5.15.2",
     "eslint-plugin-react": "^7.12.4",
