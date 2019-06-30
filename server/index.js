@@ -7,7 +7,7 @@ const json = require('koa-json')
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
-const handle = app.getRequestHandler()
+const handler = app.getRequestHandler()
 
 app.prepare().then(() => {
     const server = new Koa()
@@ -32,8 +32,7 @@ app.prepare().then(() => {
     })
 
     router.get('*', async ctx => {
-        await handle(ctx.req, ctx.res)
-        ctx.respond = false
+        await handler(ctx.req, ctx.res)
     })
 
     server.use(async (ctx, next) => {
